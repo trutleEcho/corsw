@@ -1,0 +1,132 @@
+{
+  "nav": {
+    "home": "Home",
+    "services": "Services",
+    "about": "About",
+    "contact": "Contact",
+    "toggleTheme": "Toggle theme",
+    "selectLanguage": "Select language"
+  },
+  "hero": {
+    "title": "Digital",
+    "subtitle": "Transformation",
+    "tagline": "Simplified",
+    "description": "We create minimal, powerful digital solutions that transform businesses through clean design and strategic thinking.",
+    "startJourney": "Start Your Journey",
+    "viewWork": "View Our Work",
+    "scrollDown": "Scroll down to explore"
+  },
+  "services": {
+    "title": "Our Services",
+    "subtitle": "We offer comprehensive digital solutions designed with simplicity and effectiveness in mind.",
+    "customDev": {
+      "title": "Custom Development",
+      "description": "Tailored software solutions built with precision and modern technologies.",
+      "features": ["Web Applications", "API Development", "System Integration"]
+    },
+    "designSystems": {
+      "title": "Design Systems",
+      "description": "Minimal, functional design that enhances user experience.",
+      "features": ["UI/UX Design", "Brand Identity", "Design Systems"]
+    },
+    "webSolutions": {
+      "title": "Web Solutions",
+      "description": "Fast, responsive websites optimized for performance.",
+      "features": ["Responsive Design", "SEO Optimization", "Performance"]
+    },
+    "mobileApps": {
+      "title": "Mobile Apps",
+      "description": "Native and cross-platform mobile applications.",
+      "features": ["iOS Development", "Android Apps", "Cross-platform"]
+    },
+    "analytics": {
+      "title": "Analytics",
+      "description": "Data-driven insights to optimize your digital presence.",
+      "features": ["Performance Metrics", "User Analytics", "Reporting"]
+    },
+    "security": {
+      "title": "Security",
+      "description": "Comprehensive security solutions for digital assets.",
+      "features": ["Security Audits", "Compliance", "Monitoring"]
+    },
+    "learnMore": "Learn More"
+  },
+  "about": {
+    "title": "About Us",
+    "description": "We are a team of digital craftspeople who believe in the power of minimal design and strategic thinking to transform businesses.",
+    "stats": {
+      "projects": "Projects Completed",
+      "satisfaction": "Client Satisfaction",
+      "experience": "Years Experience",
+      "support": "Support Available"
+    },
+    "principles": {
+      "minimalism": {
+        "title": "Minimalism",
+        "description": "We believe in the power of simplicity. Every element serves a purpose."
+      },
+      "performance": {
+        "title": "Performance",
+        "description": "Speed and efficiency are at the core of everything we build."
+      },
+      "quality": {
+        "title": "Quality",
+        "description": "We deliver exceptional results through attention to detail and craftsmanship."
+      }
+    }
+  },
+  "contact": {
+    "title": "Get In Touch",
+    "subtitle": "Ready to start your digital transformation? Let's discuss your project.",
+    "form": {
+      "title": "Send us a message",
+      "firstName": "First Name",
+      "lastName": "Last Name",
+      "email": "Email",
+      "subject": "Subject",
+      "message": "Message",
+      "messagePlaceholder": "Tell us about your project...",
+      "send": "Send Message",
+      "sending": "Sending...",
+      "required": "This field is required",
+      "invalidEmail": "Please enter a valid email address"
+    },
+    "info": {
+      "title": "Let's Start a Conversation",
+      "description": "We're here to help you transform your digital presence. Reach out to us and let's discuss how we can work together.",
+      "email": "hello@cornersoftwares.com",
+      "phone": "+1 (555) 123-4567",
+      "location": "New York, NY"
+    }
+  },
+  "calculator": {
+    "title": "Project Cost Calculator",
+    "subtitle": "Get an instant estimate for your project",
+    "complexity": "Project Complexity",
+    "timeline": "Timeline",
+    "weeks": "weeks",
+    "includeDesign": "Include UI/UX Design",
+    "includeMaintenance": "6-Month Maintenance",
+    "breakdown": "Price Breakdown",
+    "baseDevelopment": "Base Development",
+    "design": "UI/UX Design",
+    "maintenance": "Maintenance (6 months)",
+    "total": "Total Estimate",
+    "getQuote": "Get Detailed Quote",
+    "disclaimer": "*This is an estimate. Final pricing may vary based on specific requirements.",
+    "complexityLevels": {
+      "simple": "Simple",
+      "medium": "Medium",
+      "complex": "Complex"
+    }
+  },
+  "footer": {
+    "description": "Transforming businesses through minimal design and strategic digital solutions.",
+    "rights": "All rights reserved.",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service"
+  },
+  "loading": "Loading",
+  "error": "Something went wrong. Please try again.",
+  "success": "Success!"
+}
