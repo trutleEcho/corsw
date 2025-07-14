@@ -3,7 +3,6 @@ import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import { ThemeProvider } from '@/providers/theme-provider';
 import { QueryProvider } from '@/providers/query-provider';
-import { ErrorBoundary } from '@/components/ui/error-boundary';
 import { I18nProvider } from '@/providers/i18n-provider';
 
 const inter = Inter({
