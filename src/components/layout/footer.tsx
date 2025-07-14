@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion';
 import { Separator } from '@/components/ui/separator';
 import { useTranslation } from 'react-i18next';
+import Image from "next/image";
 
 export function Footer() {
     const { t } = useTranslation();
@@ -17,8 +18,40 @@ export function Footer() {
                     viewport={{ once: true }}
                     className="text-center"
                 >
-                    <div className="text-2xl font-bold text-black dark:text-white mb-4">
-                        Corner Softwares
+                    <div className="text-2xl font-bold text-black dark:text-white mb-4 flex items-center justify-center gap-2">
+
+                        {/* 64x64 Logos */}
+                        <Image
+                            src="/CORSW_BG_LIGHT_64x64.png"
+                            alt="Logo"
+                            width={64}
+                            height={64}
+                            className="hidden md:block dark:hidden"
+                        />
+                        <Image
+                            src="/CORSW_BG_DARK_64x64.png"
+                            alt="Logo"
+                            width={64}
+                            height={64}
+                            className="hidden dark:md:block"
+                        />
+
+                        {/* 32x32 Logos */}
+                        <Image
+                            src="/CORSW_BG_LIGHT_32x32.png"
+                            alt="Logo"
+                            width={32}
+                            height={32}
+                            className="block md:hidden dark:hidden"
+                        />
+                        <Image
+                            src="/CORSW_BG_DARK_32x32.png"
+                            alt="Logo"
+                            width={32}
+                            height={32}
+                            className="hidden dark:block dark:md:hidden"
+                        />
+                        <span className="hidden md:inline dark:hidden">Corner Softwares</span>
                     </div>
                     <p className="text-gray-600 dark:text-gray-400 mb-8 max-w-md mx-auto">
                         {t('footer.description')}

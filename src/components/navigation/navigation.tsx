@@ -17,6 +17,7 @@ export function Navigation() {
     const navItems = [
         { label: t('nav.home'), href: '#home' },
         { label: t('nav.services'), href: '#services' },
+        { label: t('nav.pricing'), href: '#pricing' },
         { label: t('nav.about'), href: '#about' },
         { label: t('nav.contact'), href: '#contact' },
     ];
@@ -54,7 +55,7 @@ export function Navigation() {
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
                             transition={{ delay: 0.2 }}
-                            className="text-xl md:text-2xl font-bold text-black dark:text-white transition-colors duration-300 flex flex-row items-center gap-4"
+                            className="text-xl md:text-2xl font-bold transition-colors duration-300 flex flex-row items-center gap-4"
                         >
                             {/* 64x64 Logos */}
                             <Image

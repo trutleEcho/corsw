@@ -2,13 +2,15 @@
 
 import {Navigation} from '@/components/navigation/navigation';
 import {HeroSection} from '@/components/sections/hero-section';
-import {ServicesSection} from '@/components/sections/services-section';
 import {AboutSection} from '@/components/sections/about-section';
-import {ContactSection} from '@/components/sections/contact-section';
-import {EnhancedCalculator} from '@/components/pricing/enhanced-calculator';
 import {Footer} from '@/components/layout/footer';
 import {GeometricShapes} from '@/components/ui/geometric-shapes';
 import {TransformationJourney} from "@/components/sections/transformation-journey";
+import PriceCalculator from "@/components/pricing/enhanced-calculator";
+import GlassHeroSection from "@/components/sections/glass-hero-section";
+import GlassFeaturesSection from "@/components/sections/glass-features-section";
+import VerticalProcessFlow from "@/components/sections/vertical-process-flow";
+import {SimpleCenteredContactForm} from "@/components/sections/simple-centered-contact-form";
 
 export default function HomePage() {
     return (
@@ -19,15 +21,13 @@ export default function HomePage() {
 
             <Navigation/>
             <HeroSection/>
+            <GlassHeroSection/>
             <TransformationJourney/>
-            <ServicesSection/>
-            <section className="py-20 bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm relative z-10">
-                <div className="max-w-7xl mx-auto px-6 lg:px-8">
-                    <EnhancedCalculator/>
-                </div>
-            </section>
+            <GlassFeaturesSection/>
+            <VerticalProcessFlow/>
+            <PriceCalculator/>
             <AboutSection/>
-            <ContactSection/>
+            <SimpleCenteredContactForm/>
             <Footer/>
         </main>
     );

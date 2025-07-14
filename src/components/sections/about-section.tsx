@@ -11,9 +11,9 @@ export function AboutSection() {
     const {t} = useTranslation();
 
     const stats = [
-        {value: '150+', label: t('about.stats.projects')},
+        {value: '15+', label: t('about.stats.projects')},
         {value: '98%', label: t('about.stats.satisfaction')},
-        {value: '5+', label: t('about.stats.experience')},
+        {value: '2+', label: t('about.stats.experience')},
         {value: '24/7', label: t('about.stats.support')}
     ];
 

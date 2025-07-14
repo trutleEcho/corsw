@@ -1,8 +1,6 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { ArrowRight } from 'lucide-react';
-import { Button } from '@/components/ui/button';
 import { useTranslation } from 'react-i18next';
 import {GeometricShapes} from "@/components/ui/geometric-shapes";
 
@@ -10,7 +8,7 @@ export function HeroSection() {
     const { t } = useTranslation();
 
     return (
-        <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-white dark:bg-gray-900 transition-colors duration-300 y-10">
+        <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden transition-colors duration-300 y-10">
             <GeometricShapes />
             <div className="relative z-10 max-w-6xl mx-auto px-6 lg:px-8 text-center">
                 <motion.div
@@ -19,7 +17,7 @@ export function HeroSection() {
                     transition={{ duration: 0.8, delay: 0.2 }}
                 >
                     <motion.h1
-                        className="text-5xl md:text-7xl lg:text-8xl font-bold text-black dark:text-white mb-8 leading-tight transition-colors duration-300"
+                        className="text-5xl md:text-7xl lg:text-8xl font-bold mb-8 leading-tight transition-colors duration-300"
                         initial={{ opacity: 0, y: 30 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8, delay: 0.4 }}
@@ -39,41 +37,6 @@ export function HeroSection() {
                     >
                         {t('hero.description')}
                     </motion.p>
-
-                    <motion.div
-                        initial={{ opacity: 0, y: 30 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.8, delay: 0.8 }}
-                        className="flex flex-col sm:flex-row gap-6 justify-center items-center"
-                    >
-                        <motion.div
-                            whileHover={{ scale: 1.05 }}
-                            whileTap={{ scale: 0.95 }}
-                            transition={{ duration: 0.2 }}
-                        >
-                            <Button
-                                size="lg"
-                                className="bg-black dark:bg-white text-white dark:text-black hover:bg-gray-800 dark:hover:bg-gray-200 px-8 py-4 text-lg font-medium group transition-all duration-300 shadow-lg hover:shadow-xl"
-                            >
-                                {t('hero.startJourney')}
-                                <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform duration-300" />
-                            </Button>
-                        </motion.div>
-
-                        <motion.div
-                            whileHover={{ scale: 1.05 }}
-                            whileTap={{ scale: 0.95 }}
-                            transition={{ duration: 0.2 }}
-                        >
-                            <Button
-                                variant="outline"
-                                size="lg"
-                                className="border-black dark:border-white text-black dark:text-white hover:bg-black dark:hover:bg-white hover:text-white dark:hover:text-black px-8 py-4 text-lg font-medium transition-all duration-300 shadow-lg hover:shadow-xl"
-                            >
-                                {t('hero.viewWork')}
-                            </Button>
-                        </motion.div>
-                    </motion.div>
                 </motion.div>
 
                 {/* Scroll Indicator - Fixed Position */}
