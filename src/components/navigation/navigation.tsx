@@ -8,6 +8,7 @@ import { ThemeToggle } from '@/components/ui/theme-toggle';
 import { LanguageSelector } from '@/components/ui/language-selector';
 import { useTranslation } from 'react-i18next';
 import Image from "next/image";
+import Link from "next/link";
 
 export function Navigation() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -15,11 +16,12 @@ export function Navigation() {
     const { t } = useTranslation();
 
     const navItems = [
-        { label: t('nav.home'), href: '#home' },
-        { label: t('nav.services'), href: '#services' },
-        { label: t('nav.pricing'), href: '#pricing' },
-        { label: t('nav.about'), href: '#about' },
-        { label: t('nav.contact'), href: '#contact' },
+        { label: t('nav.home'), href: '/' },
+        { label: t('nav.services'), href: 'services' },
+        { label: t('nav.pricing'), href: 'pricing' },
+        { label: t('nav.about'), href: 'about' },
+        { label: t('nav.contact'), href: 'contact' },
+        { label: t('nav.portfolio'), href: 'portfolio' },
     ];
 
     useEffect(() => {
@@ -31,10 +33,10 @@ export function Navigation() {
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
-    const handleNavClick = (href: string) => {
-        document.querySelector(href)?.scrollIntoView({ behavior: 'smooth' });
-        setIsMenuOpen(false);
-    };
+    // const handleNavClick = (href: string) => {
+    //     document.querySelector(href)?.scrollIntoView({ behavior: 'smooth' });
+    //     setIsMenuOpen(false);
+    // };
 
     return (
         <>
@@ -89,7 +91,7 @@ export function Navigation() {
                                 className="hidden dark:block dark:md:hidden"
                             />
 
-                            Corner Softwares
+                            {t('common.cornerSoftwares')}
                         </motion.div>
 
                         {/* Desktop Navigation */}
@@ -100,10 +102,11 @@ export function Navigation() {
                                     initial={{ opacity: 0, y: -20 }}
                                     animate={{ opacity: 1, y: 0 }}
                                     transition={{ delay: 0.3 + index * 0.1 }}
-                                    onClick={() => handleNavClick(item.href)}
                                     className="text-sm font-medium text-gray-800 dark:text-gray-200 hover:text-black dark:hover:text-white transition-colors duration-300 relative group"
                                 >
-                                    {item.label}
+                                    <Link href={item.href} className="relative z-10">
+                                        {item.label}
+                                    </Link>
                                     <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-black dark:bg-white transition-all duration-300 group-hover:w-full"></span>
                                 </motion.button>
                             ))}
@@ -169,16 +172,17 @@ export function Navigation() {
 
                             <div className="space-y-8">
                                 {navItems.map((item, index) => (
-                                    <motion.button
-                                        key={item.label}
-                                        initial={{ opacity: 0, x: 50 }}
-                                        animate={{ opacity: 1, x: 0 }}
-                                        transition={{ delay: 0.1 + index * 0.1 }}
-                                        onClick={() => handleNavClick(item.href)}
-                                        className="block w-full text-left text-lg font-medium text-gray-800 dark:text-gray-200 hover:text-black dark:hover:text-white transition-colors duration-300 py-2 px-4 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800"
-                                    >
-                                        {item.label}
-                                    </motion.button>
+                                    <Link key={item.label} href={item.href}>
+                                        <motion.button
+                                            key={item.label}
+                                            initial={{ opacity: 0, x: 50 }}
+                                            animate={{ opacity: 1, x: 0 }}
+                                            transition={{ delay: 0.1 + index * 0.1 }}
+                                            className="block w-full text-left text-lg font-medium text-gray-800 dark:text-gray-200 hover:text-black dark:hover:text-white transition-colors duration-300 py-2 px-4 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800"
+                                        >
+                                            {item.label}
+                                        </motion.button>
+                                    </Link>
                                 ))}
                             </div>
                         </div>

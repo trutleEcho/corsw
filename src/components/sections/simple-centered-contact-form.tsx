@@ -1,5 +1,6 @@
 "use client";
 import { Mail, Phone, Clock } from "lucide-react";
+import {Button} from "@/components/ui/button";
 
 export function SimpleCenteredContactForm() {
     const handleSubmit = (
@@ -27,7 +28,7 @@ export function SimpleCenteredContactForm() {
     ];
 
     return (
-        <div className="w-full flex items-center justify-center min-h-screen py-12">
+        <div className="w-full flex items-center justify-center min-h-screen py-32">
             <div className="flex relative px-4 z-20 items-start w-full justify-center max-w-7xl mx-auto">
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 w-full">
                     {/* Contact Form */}
@@ -151,12 +152,13 @@ export function SimpleCenteredContactForm() {
                                 </div>
 
                                 <div>
-                                    <button
+                                    <Button
                                         type="submit"
-                                        className="bg-primary/10 hover:bg-primary/90 text-accent-foreground text-lg transition-colors duration-200 rounded-lg px-8 py-4 flex items-center justify-center w-full font-[var(--font-inter)]"
+                                        disabled={true}
+                                        className="bg-primary/10 hover:bg-primary/90 text-accent-foreground text-lg transition-colors duration-200 rounded-lg py-8 flex items-center justify-center w-full font-[var(--font-inter)]"
                                     >
-                                        Send Message
-                                    </button>
+                                        Send Message (coming soon)
+                                    </Button>
                                 </div>
                             </form>
                         </div>
@@ -178,7 +180,9 @@ export function SimpleCenteredContactForm() {
                                     </div>
                                     <div>
                                         <h3 className="text-sm font-medium text-primary mb-1">Email</h3>
-                                        <p className="text-muted-foreground">hello@cornersoftware.com</p>
+                                        <a href="mailto:trichup20@gmail.com" className="text-muted-foreground underline">
+                                            trichup20@gmail.com
+                                        </a>
                                     </div>
                                 </div>
 
@@ -190,7 +194,7 @@ export function SimpleCenteredContactForm() {
                                     </div>
                                     <div>
                                         <h3 className="text-sm font-medium text-primary mb-1">Phone</h3>
-                                        <p className="text-muted-foreground">+91 9175395577</p>
+                                        <a href="tel:+91 9175395577" className="text-muted-foreground underline">+91 9175395577</a>
                                     </div>
                                 </div>
 

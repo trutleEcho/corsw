@@ -1,10 +1,14 @@
 {
+  "common": {
+    "cornerSoftwares": "Corner Softwares"
+  },
   "nav": {
     "home": "Home",
     "services": "Services",
     "pricing": "Pricing",
     "about": "About",
     "contact": "Contact",
+    "portfolio": "Portfolio",
     "toggleTheme": "Toggle theme",
     "selectLanguage": "Select language"
   },
@@ -23,32 +27,56 @@
     "customDev": {
       "title": "Custom Development",
       "description": "Tailored software solutions built with precision and modern technologies.",
-      "features": ["Web Applications", "API Development", "System Integration"]
+      "features": [
+        "Web Applications",
+        "API Development",
+        "System Integration"
+      ]
     },
     "designSystems": {
       "title": "Design Systems",
       "description": "Minimal, functional design that enhances user experience.",
-      "features": ["UI/UX Design", "Brand Identity", "Design Systems"]
+      "features": [
+        "UI/UX Design",
+        "Brand Identity",
+        "Design Systems"
+      ]
     },
     "webSolutions": {
       "title": "Web Solutions",
       "description": "Fast, responsive websites optimized for performance.",
-      "features": ["Responsive Design", "SEO Optimization", "Performance"]
+      "features": [
+        "Responsive Design",
+        "SEO Optimization",
+        "Performance"
+      ]
     },
     "mobileApps": {
       "title": "Mobile Apps",
       "description": "Native and cross-platform mobile applications.",
-      "features": ["iOS Development", "Android Apps", "Cross-platform"]
+      "features": [
+        "iOS Development",
+        "Android Apps",
+        "Cross-platform"
+      ]
     },
     "analytics": {
       "title": "Analytics",
       "description": "Data-driven insights to optimize your digital presence.",
-      "features": ["Performance Metrics", "User Analytics", "Reporting"]
+      "features": [
+        "Performance Metrics",
+        "User Analytics",
+        "Reporting"
+      ]
     },
     "security": {
       "title": "Security",
       "description": "Comprehensive security solutions for digital assets.",
-      "features": ["Security Audits", "Compliance", "Monitoring"]
+      "features": [
+        "Security Audits",
+        "Compliance",
+        "Monitoring"
+      ]
     },
     "learnMore": "Learn More"
   },

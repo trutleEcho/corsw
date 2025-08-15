@@ -57,13 +57,13 @@ export default function GlassFeaturesSection() {
     };
 
     return (
-        <section id="services" className="section-padding py-24 relative overflow-hidden bg-gradient-to-b from-primary/60 via-gray-800/50 to-primary/60">
+        <section id="services" className="section-padding py-32 relative overflow-hidden bg-gradient-to-b from-primary/60 via-gray-800/50 to-primary/60">
             {/* Background Elements */}
             <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-primary/60 to-white/5" />
             <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/40 rounded-full blur-3xl animate-pulse" />
             <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-primary/40 rounded-full blur-3xl animate-pulse delay-1000" />
 
-            <div className="container mx-auto relative z-10 max-w-7xl">
+            <div className="container mx-auto relative z-10 max-w-7xl mt-16">
                 {/* Header */}
                 <motion.div
                     initial={{ opacity: 0, y: 30 }}
@@ -188,24 +188,24 @@ export default function GlassFeaturesSection() {
                     })}
                 </motion.div>
 
-                {/* Bottom CTA */}
-                <motion.div
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.6, delay: 0.5 }}
-                    className="text-center mt-16"
-                >
-                    <motion.div
-                        whileHover={{ scale: 1.05 }}
-                        whileTap={{ scale: 0.95 }}
-                        className="inline-block"
-                    >
-                        <div className="px-8 py-4 rounded-2xl border border-accent/30 text-white font-semibold cursor-pointer hover:glass-strong transition-all duration-300">
-                            Explore All Services →
-                        </div>
-                    </motion.div>
-                </motion.div>
+                {/*/!* Bottom CTA *!/*/}
+                {/*<motion.div*/}
+                {/*    initial={{ opacity: 0, y: 30 }}*/}
+                {/*    whileInView={{ opacity: 1, y: 0 }}*/}
+                {/*    viewport={{ once: true }}*/}
+                {/*    transition={{ duration: 0.6, delay: 0.5 }}*/}
+                {/*    className="text-center mt-16"*/}
+                {/*>*/}
+                {/*    <motion.div*/}
+                {/*        whileHover={{ scale: 1.05 }}*/}
+                {/*        whileTap={{ scale: 0.95 }}*/}
+                {/*        className="inline-block"*/}
+                {/*    >*/}
+                {/*        <div className="px-8 py-4 rounded-2xl border border-accent/30 text-white font-semibold cursor-pointer hover:glass-strong transition-all duration-300">*/}
+                {/*            Explore All Services →*/}
+                {/*        </div>*/}
+                {/*    </motion.div>*/}
+                {/*</motion.div>*/}
             </div>
         </section>
     );

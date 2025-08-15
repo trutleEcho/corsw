@@ -10,6 +10,7 @@ import { Checkbox } from "@/components/ui/checkbox"
 import { Button } from "@/components/ui/button"
 import { Calculator, DollarSign, Clock, Target } from "lucide-react"
 import {Separator} from "@/components/ui/separator";
+import {GeometricShapes} from "@/components/ui/geometric-shapes";
 
 interface ProjectType {
     id: string
@@ -98,7 +99,8 @@ export default function PriceCalculator() {
 
     return (
         <section id="pricing" className="relative z-10">
-            <div className="container mx-auto px-4 max-w-6xl py-12 md:py-24">
+            <GeometricShapes/>
+            <div className="container mx-auto px-6 max-w-6xl py-32">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -106,7 +108,6 @@ export default function PriceCalculator() {
                     className="text-center mb-16"
                 >
                     <div className="flex items-center justify-center gap-3 mb-6">
-                        <Calculator className="h-8 w-8 text-gray-900 dark:text-white" />
                         <h2 className="text-4xl md:text-5xl font-bold ">
                             Project Cost Calculator
                         </h2>

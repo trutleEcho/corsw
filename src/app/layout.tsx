@@ -4,6 +4,8 @@ import { Inter } from 'next/font/google';
 import { ThemeProvider } from '@/providers/theme-provider';
 import { QueryProvider } from '@/providers/query-provider';
 import { I18nProvider } from '@/providers/i18n-provider';
+import {Navigation} from "@/components/navigation/navigation";
+import {Footer} from "@/components/layout/footer";
 
 const inter = Inter({
     subsets: ['latin'],
@@ -39,7 +41,7 @@ export const metadata: Metadata = {
         'scalable applications',
         'modern web technologies'
     ],
-    authors: [{ name: 'Corner Software', url: 'https://cornersoftware.com' }],
+    authors: [{ name: 'Corner Software', url: 'https://corsw.com' }],
     creator: 'Corner Software',
     publisher: 'Corner Software',
     formatDetection: {
@@ -47,14 +49,14 @@ export const metadata: Metadata = {
         address: false,
         telephone: false,
     },
-    metadataBase: new URL('https://cornersoftware.com'),
+    metadataBase: new URL('https://corsw.com'),
     alternates: {
         canonical: '/',
     },
     openGraph: {
         title: 'Corner Software - Innovative Software Solutions & Development',
         description: 'Leading software development company specializing in web applications, mobile apps, IoT solutions, digital marketing, and cloud infrastructure.',
-        url: 'https://cornersoftware.com',
+        url: 'https://corsw.com',
         siteName: 'Corner Software',
         images: [
             {
@@ -71,8 +73,8 @@ export const metadata: Metadata = {
         card: 'summary_large_image',
         title: 'Corner Software - Innovative Software Solutions & Development',
         description: 'Leading software development company specializing in web applications, mobile apps, IoT solutions, digital marketing, and cloud infrastructure.',
-        site: '@cornersoftware',
-        creator: '@cornersoftware',
+        site: '@corsw',
+        creator: '@corsw',
         images: ['/twitter-image.jpg'],
     },
     robots: {
@@ -110,8 +112,9 @@ export default function RootLayout({
 
             {/* Favicon and icons */}
             <link rel="icon" href="/favicon.ico" sizes="any" />
-            <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-            <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+            <link rel="icon" type="image/png" sizes="32x32" href="/CORSW_BG_DARK_64x64.png" />
+            <link rel="icon" type="image/png" sizes="16x16" href="/CORSW_BG_DARK_32x32.png" />
+            <link rel="apple-touch-icon" href="/apple-icon.png" />
             <link rel="manifest" href="/manifest.json" />
 
             {/* Theme color */}
@@ -133,8 +136,8 @@ export default function RootLayout({
                         "@context": "https://schema.org",
                         "@type": "Organization",
                         "name": "Corner Software",
-                        "url": "https://cornersoftware.com",
-                        "logo": "https://cornersoftware.com/logo.png",
+                        "url": "https://corsw.com",
+                        "logo": "https://corsw.com/logo.png",
                         "description": "Leading software development company specializing in web applications, mobile apps, IoT solutions, digital marketing, and cloud infrastructure.",
                         "foundingDate": "2020",
                         "founder": {
@@ -147,14 +150,14 @@ export default function RootLayout({
                         },
                         "contactPoint": {
                             "@type": "ContactPoint",
-                            "telephone": "+91-XXXXXXXXXX",
+                            "telephone": "+91-9175395577",
                             "contactType": "customer service",
                             "availableLanguage": "English"
                         },
                         "sameAs": [
-                            "https://twitter.com/cornersoftware",
-                            "https://linkedin.com/company/cornersoftware",
-                            "https://github.com/cornersoftware"
+                            "https://twitter.com/corsw",
+                            "https://linkedin.com/company/corsw",
+                            "https://github.com/corsw"
                         ],
                         "service": [
                             {
@@ -191,7 +194,9 @@ export default function RootLayout({
             >
                 <I18nProvider>
                     <QueryProvider>
+                        <Navigation/>
                         {children}
+                        <Footer/>
                     </QueryProvider>
                 </I18nProvider>
             </ThemeProvider>
