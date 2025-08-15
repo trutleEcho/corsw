@@ -59,7 +59,7 @@ const products: Product[] = [
             "Modern and user-friendly budgeting app for tracking expenses and income,saving goals, budgets, assets, liabilities and financial progress.",
         image: "/portfolio/budgety-dashboard.jpg",
         technologies: ["React Native", "Expo", "EAS", "MongoDB"],
-        downloadUrl: "http://localhost:3000/CORSWBudgety010.apk",
+        downloadUrl: "https://corsw.vercel.app/CORSWBudgety010.apk",
         category: "mobile",
     },
     {
@@ -68,7 +68,7 @@ const products: Product[] = [
         description: "A secure and user-friendly mobile application for managing small group chit funds.",
         image: "/portfolio/bcircle-dashboard.jpg",
         technologies: ["React Native", "Expo", "EAS", "Firebase"],
-        downloadUrl: "http://localhost:3000/CORSWBCircle100.apk",
+        downloadUrl: "https://corsw.vercel.app/CORSWBCircle100.apk",
         category: "mobile",
     },
 ]
