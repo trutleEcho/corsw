@@ -20,8 +20,8 @@ export const metadata: Metadata = {
     },
     description: 'Leading software development company specializing in web applications, mobile apps, IoT solutions, digital marketing, and cloud infrastructure. Transform your business with cutting-edge technology.',
     icons: {
-        icon: "/favicon.ico",
-        shortcut: "/favicon.ico",
+        icon: "/CORSW_BG_DARK_64x64.png",
+        shortcut: "/CORSW_BG_DARK_64x64.png",
         apple: "/apple-icon.png",
     },
     keywords: [
@@ -115,9 +115,9 @@ export default function RootLayout({
             <link rel="preconnect" href="https://fonts.googleapis.com" />
             <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
 
-            {/* Favicon and icons */}
-            <link rel="icon" href="/favicon.ico" sizes="any" />
-            <link rel="apple-touch-icon" href="/apple-icon.png" />
+            {/*/!* Favicon and icons *!/*/}
+            {/*<link rel="icon" href="/CORSW_BG_DARK_64x64.png" sizes="any" />*/}
+            {/*<link rel="apple-touch-icon" href="/apple-icon.png" />*/}
 
             <link rel="manifest" href="/manifest.json" />
 
