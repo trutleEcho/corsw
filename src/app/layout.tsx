@@ -19,6 +19,11 @@ export const metadata: Metadata = {
         template: '%s | Corner Software'
     },
     description: 'Leading software development company specializing in web applications, mobile apps, IoT solutions, digital marketing, and cloud infrastructure. Transform your business with cutting-edge technology.',
+    icons: {
+        icon: "/favicon.ico",
+        shortcut: "/favicon.ico",
+        apple: "/apple-icon.png",
+    },
     keywords: [
         'Corner Software',
         'software development',
@@ -112,9 +117,8 @@ export default function RootLayout({
 
             {/* Favicon and icons */}
             <link rel="icon" href="/favicon.ico" sizes="any" />
-            <link rel="icon" type="image/png" sizes="32x32" href="/CORSW_BG_DARK_64x64.png" />
-            <link rel="icon" type="image/png" sizes="16x16" href="/CORSW_BG_DARK_32x32.png" />
             <link rel="apple-touch-icon" href="/apple-icon.png" />
+
             <link rel="manifest" href="/manifest.json" />
 
             {/* Theme color */}
