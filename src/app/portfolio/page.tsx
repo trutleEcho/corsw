@@ -4,22 +4,12 @@ import {useState, useEffect} from "react"
 import {Card} from "@/components/ui/card"
 import {Button} from "@/components/ui/button"
 import {Badge} from "@/components/ui/badge"
-import {ChevronLeft, ChevronRight, Download, ExternalLink, PhoneCall} from "lucide-react"
+import {ArrowRight, ChevronLeft, ChevronRight, Download, ExternalLink} from "lucide-react"
 import {GeometricShapes} from "@/components/ui/geometric-shapes";
 import Image from "next/image";
 import Link from "next/link";
-
-interface Product {
-    id: string
-    title: string
-    description: string
-    image: string
-    technologies: string[]
-    liveUrl?: string
-    downloadUrl?: string
-    contact?: string
-    category: "web" | "mobile" | "desktop" | "api"
-}
+import {products} from "@/data/products";
+import {services} from "@/data/services";
 
 interface Client {
     id: string
@@ -29,49 +19,6 @@ interface Client {
     description: string
     industry: string
 }
-
-interface Service {
-    id: string
-    title: string
-    description: string
-    client: string
-    image: string
-    technologies: string[]
-    deliverables: string[]
-}
-
-const products: Product[] = [
-    {
-        id: "1",
-        title: "Queue",
-        description:
-            "A comprehensive appointment scheduling and management solution for services and appointments.",
-        image: "/portfolio/queue.png",
-        technologies: ["Next.js", "Ktor", "MongoDB", "WebSocket"],
-        liveUrl: "https://queue-roan.vercel.app/home",
-        contact: "https://github.com/user/taskflow-pro",
-        category: "web",
-    },
-    {
-        id: "2",
-        title: "Budgety",
-        description:
-            "Modern and user-friendly budgeting app for tracking expenses and income,saving goals, budgets, assets, liabilities and financial progress.",
-        image: "/portfolio/budgety-dashboard.jpg",
-        technologies: ["React Native", "Expo", "EAS", "MongoDB"],
-        downloadUrl: "https://corsw.vercel.app/CORSWBudgety010.apk",
-        category: "mobile",
-    },
-    {
-        id: "3",
-        title: "BCircle",
-        description: "A secure and user-friendly mobile application for managing small group chit funds.",
-        image: "/portfolio/bcircle-dashboard.jpg",
-        technologies: ["React Native", "Expo", "EAS", "Firebase"],
-        downloadUrl: "https://corsw.vercel.app/CORSWBCircle100.apk",
-        category: "mobile",
-    },
-]
 
 const clients: Client[] = [
     {
@@ -89,19 +36,6 @@ const clients: Client[] = [
         project: "Fashion Brand",
         description: "Managing online sales and customer engagement for a fashion brand. Ecommerce website and mobile app development(Comming soon).",
         industry: "Fashion",
-    }
-]
-
-const services: Service[] = [
-    {
-        id: "1",
-        title: "CRM System for Samarth Caters",
-        description:
-            "Built a comprehensive CRM system for Samarth Caters, including lead management, order tracking, and analytics. Also provided multi-lingual support for older and younger generations. ",
-        client: "Samarth Caters",
-        image: "/portfolio/samarth-caters-dashboard.png",
-        technologies: ["Next.js", "Supabase"],
-        deliverables: ["Custom storefront", "Admin dashboard", "Payment integration", "Analytics system"],
     }
 ]
 
@@ -220,6 +154,12 @@ export default function Portfolio() {
                                             </div>
 
                                             <div className="flex gap-4 pt-2">
+                                                <Link href={`/product/${product.id}`}>
+                                                    <Button className="group/btn bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 border-0 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
+                                                        View Details
+                                                        <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover/btn:translate-x-1" />
+                                                    </Button>
+                                                </Link>
                                                 {product.liveUrl && (
                                                     <Link target="_blank" href={product.liveUrl}>
                                                         <Button
@@ -242,11 +182,18 @@ export default function Portfolio() {
                                                 )}
                                                 {product.contact && (
                                                     <Button
+                                                        asChild
                                                         variant="outline"
-                                                        className="border-gray-200 hover:border-gray-900 hover:bg-gray-900 hover:text-white transition-all duration-300 hover:scale-105 bg-transparent"
+                                                        className="hover:bg-gray-900 hover:text-white transition-all duration-300 bg-transparent border-foreground"
                                                     >
-                                                        <PhoneCall className="w-4 h-4 mr-2"/>
-                                                        Contact Sales
+                                                        <a
+                                                            href={product.contact}
+                                                            target="_blank"
+                                                            rel="noopener noreferrer"
+                                                        >
+                                                            <ExternalLink className="w-4 h-4 mr-2" />
+                                                            Contact Sales
+                                                        </a>
                                                     </Button>
                                                 )}
                                             </div>
@@ -441,6 +388,14 @@ export default function Portfolio() {
                                                         ))}
                                                     </div>
                                                 </div>
+                                            </div>
+                                            <div className="flex gap-4 pt-2">
+                                                <Link href={`/service/${service.id}`}>
+                                                    <Button className="group/btn bg-gradient-to-r from-purple-600 to-purple-700 hover:from-purple-700 hover:to-purple-800 border-0 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
+                                                        View Details
+                                                        <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover/btn:translate-x-1" />
+                                                    </Button>
+                                                </Link>
                                             </div>
                                         </div>
                                     </div>
