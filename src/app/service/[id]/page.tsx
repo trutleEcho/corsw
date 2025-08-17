@@ -6,8 +6,6 @@ import { ArrowLeft, Building, Calendar, Users, CheckCircle } from "lucide-react"
 import Link from "next/link"
 import {services} from "@/data/services";
 
-
-
 export default async function ServiceDetailPage({ params }: { params: Promise<{ id: string }> }) {
     const {id} = await params
     const service = services.find((s) => s.id === id)

@@ -153,7 +153,7 @@ export default function Portfolio() {
                                                 ))}
                                             </div>
 
-                                            <div className="flex gap-4 pt-2">
+                                            <div className="flex flex-wrap gap-2 md:gap-4 pt-2">
                                                 <Link href={`/product/${product.id}`}>
                                                     <Button className="group/btn bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 border-0 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
                                                         View Details
