@@ -98,9 +98,9 @@ export default function PriceCalculator() {
     const hasAllSelections = selectedProjectType && selectedComplexity && selectedTimeline
 
     return (
-        <section id="pricing" className="relative z-10">
+        <section id="pricing" className="relative z-50">
             <GeometricShapes/>
-            <div className="container mx-auto px-6 max-w-6xl py-32">
+            <div className="container mx-auto px-6 max-w-6xl py-32 relative z-10">
                 <motion.div
                     initial={{opacity: 0, y: 20}}
                     animate={{opacity: 1, y: 0}}

@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 
 export function GeometricShapes() {
     return (
-        <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute inset-0 overflow-hidden -z-10">
             {/* Large Circle */}
             <motion.div
                 className="absolute -top-40 -right-40 w-80 h-80 border border-gray-200 dark:border-gray-700 rounded-full"
