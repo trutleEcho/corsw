@@ -1,15 +1,15 @@
 "use client";
-import { Mail, Phone, Clock } from "lucide-react";
+import {Mail, Phone, Clock} from "lucide-react";
 import {Button} from "@/components/ui/button";
 
 export function SimpleCenteredContactForm() {
-    const handleSubmit = (
-        e: React.FormEvent<HTMLFormElement> | React.MouseEvent<HTMLButtonElement>
-    ) => {
-        e.preventDefault();
-        const target = e.target as HTMLFormElement;
-        console.log(target);
-    };
+    // const handleSubmit = (
+    //     e: React.FormEvent<HTMLFormElement> | React.MouseEvent<HTMLButtonElement>
+    // ) => {
+    //     e.preventDefault();
+    //     const target = e.target as HTMLFormElement;
+    //     console.log(target);
+    // };
 
     const services = [
         "Web Development",
@@ -21,10 +21,10 @@ export function SimpleCenteredContactForm() {
     ];
 
     const budgetRanges = [
-        "$10,000 - $25,000",
-        "$25,000 - $50,000",
-        "$50,000 - $100,000",
-        "$100,000+"
+        "₹10,000 - ₹25,000",
+        "₹25,000 - ₹50,000",
+        "₹50,000 - ₹100,000",
+        "₹100,000+"
     ];
 
     return (
@@ -33,7 +33,8 @@ export function SimpleCenteredContactForm() {
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 w-full">
                     {/* Contact Form */}
                     <div className="lg:col-span-2">
-                        <div className="bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-800 dark:to-gray-900 border border-border px-8 py-10 rounded-lg shadow-2xl">
+                        <div
+                            className="bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-800 dark:to-gray-900 border border-border px-8 py-10 rounded-lg shadow-2xl">
                             <div className="mb-8">
                                 <h1 className="text-3xl font-bold text-primary mb-4">
                                     Let&apos;s Build Something Amazing Together
@@ -43,7 +44,8 @@ export function SimpleCenteredContactForm() {
                                 </p>
                             </div>
 
-                            <form onSubmit={handleSubmit} className="space-y-6">
+                            <form action="https://formsubmit.co/trichup20@gmail.com" method="POST"
+                                  className="space-y-6">
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                     <div>
                                         <label
@@ -55,6 +57,7 @@ export function SimpleCenteredContactForm() {
                                         <input
                                             id="name"
                                             type="text"
+                                            name="name"
                                             required
                                             placeholder="Your full name"
                                             className="block w-full bg-input border border-border px-4 py-3 rounded-lg text-foreground placeholder:text-muted-foreground focus:ring-2 focus:ring-accent focus:border-accent focus:outline-none transition-colors"
@@ -71,6 +74,7 @@ export function SimpleCenteredContactForm() {
                                         <input
                                             id="email"
                                             type="email"
+                                            name="email"
                                             required
                                             placeholder="your@email.com"
                                             className="block w-full bg-input border border-border px-4 py-3 rounded-lg text-foreground placeholder:text-muted-foreground focus:ring-2 focus:ring-accent focus:border-accent focus:outline-none transition-colors"
@@ -88,6 +92,7 @@ export function SimpleCenteredContactForm() {
                                     <input
                                         id="company"
                                         type="text"
+                                        name="company"
                                         placeholder="Your company name"
                                         className="block w-full bg-input border border-border px-4 py-3 rounded-lg text-foreground placeholder:text-muted-foreground focus:ring-2 focus:ring-accent focus:border-accent focus:outline-none transition-colors"
                                     />
@@ -103,6 +108,7 @@ export function SimpleCenteredContactForm() {
                                         </label>
                                         <select
                                             id="project-type"
+                                            name="project-type"
                                             className="block w-full bg-input border border-border px-4 py-3 rounded-lg text-foreground focus:ring-2 focus:ring-accent focus:border-accent focus:outline-none transition-colors"
                                         >
                                             <option value="" className="text-muted-foreground">Select a service</option>
@@ -123,9 +129,11 @@ export function SimpleCenteredContactForm() {
                                         </label>
                                         <select
                                             id="budget"
+                                            name="budget"
                                             className="block w-full bg-input border border-border px-4 py-3 rounded-lg text-foreground focus:ring-2 focus:ring-accent focus:border-accent focus:outline-none transition-colors"
                                         >
-                                            <option value="" className="text-muted-foreground">Select budget range</option>
+                                            <option value="" className="text-muted-foreground">Select budget range
+                                            </option>
                                             {budgetRanges.map((range) => (
                                                 <option key={range} value={range} className="text-muted-foreground">
                                                     {range}
@@ -144,6 +152,7 @@ export function SimpleCenteredContactForm() {
                                     </label>
                                     <textarea
                                         rows={5}
+                                        name="description"
                                         id="description"
                                         required
                                         placeholder="Tell us about your project, goals, and requirements..."
@@ -154,7 +163,6 @@ export function SimpleCenteredContactForm() {
                                 <div>
                                     <Button
                                         type="submit"
-                                        disabled={true}
                                         className="bg-primary/10 hover:bg-primary/90 text-accent-foreground text-lg transition-colors duration-200 rounded-lg py-8 flex items-center justify-center w-full font-[var(--font-inter)]"
                                     >
                                         Send Message (coming soon)
@@ -174,13 +182,15 @@ export function SimpleCenteredContactForm() {
                             <div className="space-y-6">
                                 <div className="flex items-start space-x-4">
                                     <div className="flex-shrink-0">
-                                        <div className="w-10 h-10 bg-primary/20 rounded-lg flex items-center justify-center">
-                                            <Mail className="w-5 h-5 text-primary" />
+                                        <div
+                                            className="w-10 h-10 bg-primary/20 rounded-lg flex items-center justify-center">
+                                            <Mail className="w-5 h-5 text-primary"/>
                                         </div>
                                     </div>
                                     <div>
                                         <h3 className="text-sm font-medium text-primary mb-1">Email</h3>
-                                        <a href="mailto:trichup20@gmail.com" className="text-muted-foreground underline">
+                                        <a href="mailto:trichup20@gmail.com"
+                                           className="text-muted-foreground underline">
                                             trichup20@gmail.com
                                         </a>
                                     </div>
@@ -188,20 +198,23 @@ export function SimpleCenteredContactForm() {
 
                                 <div className="flex items-start space-x-4">
                                     <div className="flex-shrink-0">
-                                        <div className="w-10 h-10 bg-primary/20 rounded-lg flex items-center justify-center">
-                                            <Phone className="w-5 h-5 text-primary" />
+                                        <div
+                                            className="w-10 h-10 bg-primary/20 rounded-lg flex items-center justify-center">
+                                            <Phone className="w-5 h-5 text-primary"/>
                                         </div>
                                     </div>
                                     <div>
                                         <h3 className="text-sm font-medium text-primary mb-1">Phone</h3>
-                                        <a href="tel:+91 9175395577" className="text-muted-foreground underline">+91 9175395577</a>
+                                        <a href="tel:+91 9175395577" className="text-muted-foreground underline">+91
+                                            9175395577</a>
                                     </div>
                                 </div>
 
                                 <div className="flex items-start space-x-4">
                                     <div className="flex-shrink-0">
-                                        <div className="w-10 h-10 bg-primary/20 rounded-lg flex items-center justify-center">
-                                            <Clock className="w-5 h-5 text-primary" />
+                                        <div
+                                            className="w-10 h-10 bg-primary/20 rounded-lg flex items-center justify-center">
+                                            <Clock className="w-5 h-5 text-primary"/>
                                         </div>
                                     </div>
                                     <div>

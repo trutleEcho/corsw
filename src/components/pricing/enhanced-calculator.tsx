@@ -11,6 +11,7 @@ import {Button} from "@/components/ui/button"
 import {DollarSign, Clock, Target} from "lucide-react"
 import {Separator} from "@/components/ui/separator";
 import {GeometricShapes} from "@/components/ui/geometric-shapes";
+import Link from "next/link";
 
 interface ProjectType {
     id: string
@@ -98,7 +99,7 @@ export default function PriceCalculator() {
     const hasAllSelections = selectedProjectType && selectedComplexity && selectedTimeline
 
     return (
-        <section id="pricing" className="relative z-50">
+        <section id="pricing" className="relative z-30">
             <GeometricShapes/>
             <div className="container mx-auto px-6 max-w-6xl py-32 relative z-10">
                 <motion.div
@@ -317,10 +318,12 @@ export default function PriceCalculator() {
                                             </div>
                                         )}
 
-                                        <Button
-                                            className="w-full bg-primary/10 hover:bg-primary/90 text-accent-foreground font-medium">
-                                            Get Detailed Quote
-                                        </Button>
+                                        <Link href="/contact">
+                                            <Button
+                                                className="w-full bg-primary/10 hover:bg-primary/90 text-accent-foreground font-medium">
+                                                Get Detailed Quote
+                                            </Button>
+                                        </Link>
                                     </>
                                 ) : (
                                     <div className="text-center py-12">
