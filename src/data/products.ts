@@ -60,7 +60,7 @@ export const products: Product[] = [
         technologies: ["React Native", "Expo", "EAS", "MongoDB"],
         liveUrl: "",
         contact: "https://wa.me/919175395577?text=I%20am%20interested%20to%20get%20Budgety",
-        downloadUrl: "https://corsw.vercel.app/CORSWBudgety010.apk",
+        downloadUrl: "https://corsw.vercel.app/CORSWBudgety103.apk",
         category: "mobile",
         fullDescription:
             "Budgety is a personal finance companion designed to make budgeting simple and effective. It allows users to track expenses, incomes, savings goals, and monitor their financial health over time with intuitive dashboards.",
