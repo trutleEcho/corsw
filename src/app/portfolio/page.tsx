@@ -36,6 +36,14 @@ const clients: Client[] = [
         project: "Fashion Brand",
         description: "Managing online sales and customer engagement for a fashion brand. Ecommerce website and mobile app development(Comming soon).",
         industry: "Fashion",
+    },
+    {
+        id: "3",
+        name: "Festiraa",
+        logo: "/portfolio/festiraa_logo.png",
+        project: "Travel Agency",
+        description: "From planning to execution, Festiraa offers a comprehensive travel agency solution for seamless travel experiences.",
+        industry: "Travel",
     }
 ]
 
